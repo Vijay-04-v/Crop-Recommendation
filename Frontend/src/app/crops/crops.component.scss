@@ -1,0 +1,51 @@
+/* Animation */
+@keyframes slideFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .crop-card {
+    opacity: 0;
+    animation: slideFadeIn 0.6s ease forwards;
+  }
+  
+  /* Staggered animation using nth-child */
+  .col:nth-child(1) .crop-card {
+    animation-delay: 0.1s;
+  }
+  .col:nth-child(2) .crop-card {
+    animation-delay: 0.2s;
+  }
+  .col:nth-child(3) .crop-card {
+    animation-delay: 0.3s;
+  }
+  .col:nth-child(4) .crop-card {
+    animation-delay: 0.4s;
+  }
+  .col:nth-child(5) .crop-card {
+    animation-delay: 0.5s;
+  }
+  .col:nth-child(6) .crop-card {
+    animation-delay: 0.6s;
+  }
+  .col:nth-child(7) .crop-card {
+    animation-delay: 0.7s;
+  }
+  .col:nth-child(8) .crop-card {
+    animation-delay: 0.8s;
+  }
+  .col:nth-child(9) .crop-card {
+    animation-delay: 0.9s;
+  }
+  .col:nth-child(10) .crop-card {
+    animation-delay: 1s;
+  }
+  
+  /* ...extend further if needed for more crops */
+  

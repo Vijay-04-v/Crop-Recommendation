@@ -1,0 +1,204 @@
+<app-header></app-header>
+
+<div class="background-wrapper" style="background-image: url(../assets/bg1.jpg);">
+  <div class="form-wrapper animate-in" style="background-color: rgb(246 246 246 / 40%);">
+    <!-- Optional logo -->
+    <!-- <img src="../assets/logo1.png" alt="Form Image" class="form-logo" /> -->
+
+    <!-- The Form -->
+    <form (ngSubmit)="submitForm(cropForm)" #cropForm="ngForm">
+      <div
+        class="form-group animate-in"
+        *ngFor="let label of labels; let i = index"
+        [ngStyle]="{ 'animation-delay': (i * 0.1) + 's' }"
+      >
+        <input
+          type="number"
+          [(ngModel)]="inputs[i]"
+          [name]="label.name"
+          [placeholder]="label.placeholder"
+          required
+          #input="ngModel"
+          [ngClass]="{
+            'input-error': input.invalid && (input.touched || cropForm.submitted),
+            'shake': input.invalid && cropForm.submitted
+          }"
+        />
+        <div
+          class="error-message"
+          *ngIf="input.invalid && (input.touched || cropForm.submitted)"
+        >
+          {{ label.placeholder }} is required
+        </div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</div>
+
+
+
+<app-footer></app-footer>
+
+<style>
+/* === Background Styling === */
+.background-wrapper {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* === Form Wrapper === */
+.form-wrapper {
+  background: linear-gradient(135deg, #000000c4,#fef6f6);
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  opacity: 0;
+  animation: fadeSlideIn 0.6s ease-out forwards;
+}
+
+/* === Logo (optional) === */
+.form-logo {
+  width: 120px;
+  margin-bottom: 20px;
+}
+
+/* === Form Styles === */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+input[type="number"] {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+input[type="number"]:focus {
+  border-color: #ffb347;
+  outline: none;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+  transform: scale(1.02);
+}
+
+input[type="number"]:hover {
+  transform: scale(1.01);
+  border-color: #ffb347
+}
+
+/* === Submit Button === */
+button[type="submit"] {
+  padding: 14px;
+  background: linear-gradient(to right, #ff6e61be, #ffb247b8);
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(to right,#ffb347, #ff6f61 );
+}
+
+/* === Responsive === */
+@media (max-width: 600px) {
+  .form-wrapper {
+    padding: 16px;
+  }
+
+  .form-logo {
+    width: 90px;
+  }
+}
+
+/* === Error Handling === */
+.input-error {
+  border-color: red !important;
+  box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  text-align: left;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  50% { transform: translateX(4px); }
+  75% { transform: translateX(-4px); }
+  100% { transform: translateX(0); }
+}
+
+.shake {
+  animation: shake 0.3s ease;
+}
+
+/* === Entrance Animation === */
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-in {
+  opacity: 0;
+  animation: fadeSlideIn 0.6s ease-out forwards;
+}
+input[type="number"] {
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+  background: linear-gradient(135deg, #000000c4,#fef6f6); /* Initial gradient */
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+input[type="number"]::placeholder {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+input[type="number"]:hover {
+  transform: scale(1.03);
+  border-color: #ffb347;
+  background: linear-gradient(135deg, #6a11cb, #2575fc); /* New gradient on hover */
+}
+
+input[type="number"]:focus {
+  border-color: #ffb347;
+  outline: none;
+  box-shadow: 0 0 10px rgba(40, 167, 69, 0.4);
+  transform: scale(1.04);
+}
+
+</style>

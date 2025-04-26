@@ -1,0 +1,329 @@
+<app-header></app-header>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crop Information</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f5f5f5;
+    }
+    .crop-card {
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      background-color: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+    .crop-card:hover {
+      transform: scale(1.02);
+    }
+    .crop-img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+    }
+    .crop-info {
+      padding: 15px;
+      flex-grow: 1;
+    }
+    .crop-info h5 {
+      font-weight: 600;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+    .crop-info p {
+      font-size: 14px;
+      margin-bottom: 6px;
+    }
+  </style>
+</head>
+<body style="background: linear-gradient(to right, #ff6f61, #ffb347);">
+
+<div class="container py-5">
+  <h2 class="text-center mb-5">🌾 Crop Information</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4">
+
+    <!-- Template card format for one crop -->
+    <!-- Repeat this for each crop with different content -->
+
+    <!-- Replace the placeholder below with 24 crops -->
+    <!-- Example for Rice: -->
+    <div class="col">
+      <div class="crop-card">
+        <img src="../assets/crops/rice.jpg" class="crop-img" alt="Rice">
+        <div class="crop-info">
+          <h5>Rice</h5>
+          <p><strong>Pesticides:</strong> Carbofuran, Chlorpyrifos</p>
+          <p><strong>Best Months:</strong> June – November</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Maize -->
+    <div class="col">
+      <div class="crop-card">
+        <img src="../assets/crops/maize.jpg" class="crop-img" alt="Maize">
+        <div class="crop-info">
+          <h5>Maize</h5>
+          <p><strong>Pesticides:</strong> Atrazine, Cypermethrin</p>
+          <p><strong>Best Months:</strong> June – September</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chickpea -->
+    <div class="col">
+      <div class="crop-card">
+        <img src="../assets/crops/chickpea.jpg" class="crop-img" alt="Chickpea">
+        <div class="crop-info">
+          <h5>Chickpea</h5>
+          <p><strong>Pesticides:</strong> Dimethoate, Malathion</p>
+          <p><strong>Best Months:</strong> October – February</p>
+        </div>
+      </div>
+    </div>
+
+        <!-- Kidney Beans -->
+        <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/kidneybeans.jpg" class="crop-img" alt="Kidney Beans">
+              <div class="crop-info">
+                <h5>Kidney Beans</h5>
+                <p><strong>Pesticides:</strong> Imidacloprid, Spinosad</p>
+                <p><strong>Best Months:</strong> May – September</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Pigeon Peas -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/pigeonpeas.jpg" class="crop-img" alt="Pigeon Peas">
+              <div class="crop-info">
+                <h5>Pigeon Peas</h5>
+                <p><strong>Pesticides:</strong> Quinalphos, Endosulfan</p>
+                <p><strong>Best Months:</strong> June – December</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Moth Beans -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/mothbeans.jpg" class="crop-img" alt="Moth Beans">
+              <div class="crop-info">
+                <h5>Moth Beans</h5>
+                <p><strong>Pesticides:</strong> Lambda-cyhalothrin</p>
+                <p><strong>Best Months:</strong> July – October</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Mung Bean -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/mungbean.jpg" class="crop-img" alt="Mung Bean">
+              <div class="crop-info">
+                <h5>Mung Bean</h5>
+                <p><strong>Pesticides:</strong> Thiamethoxam, Chlorpyrifos</p>
+                <p><strong>Best Months:</strong> March – July</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Black Gram -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/blackgram.jpg" class="crop-img" alt="Black Gram">
+              <div class="crop-info">
+                <h5>Black Gram</h5>
+                <p><strong>Pesticides:</strong> Carbaryl, Monocrotophos</p>
+                <p><strong>Best Months:</strong> July – October</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Lentil -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/lentil.jpg" class="crop-img" alt="Lentil">
+              <div class="crop-info">
+                <h5>Lentil</h5>
+                <p><strong>Pesticides:</strong> Cypermethrin, Mancozeb</p>
+                <p><strong>Best Months:</strong> October – February</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Pomegranate -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/pomegranate.jpg" class="crop-img" alt="Pomegranate">
+              <div class="crop-info">
+                <h5>Pomegranate</h5>
+                <p><strong>Pesticides:</strong> Deltamethrin, Imidacloprid</p>
+                <p><strong>Best Months:</strong> February – May</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Banana -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/banana.jpg" class="crop-img" alt="Banana">
+              <div class="crop-info">
+                <h5>Banana</h5>
+                <p><strong>Pesticides:</strong> Chlorpyrifos, Carbendazim</p>
+                <p><strong>Best Months:</strong> June – September</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Mango -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/mango.jpg" class="crop-img" alt="Mango">
+              <div class="crop-info">
+                <h5>Mango</h5>
+                <p><strong>Pesticides:</strong> Monocrotophos, Carbaryl</p>
+                <p><strong>Best Months:</strong> December – March</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Grapes -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/grapes.jpg" class="crop-img" alt="Grapes">
+              <div class="crop-info">
+                <h5>Grapes</h5>
+                <p><strong>Pesticides:</strong> Mancozeb, Dithane</p>
+                <p><strong>Best Months:</strong> November – March</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Watermelon -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/watermelon.jpg" class="crop-img" alt="Watermelon">
+              <div class="crop-info">
+                <h5>Watermelon</h5>
+                <p><strong>Pesticides:</strong> Chlorothalonil, Imidacloprid</p>
+                <p><strong>Best Months:</strong> January – May</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Muskmelon -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/muskmelon.jpg" class="crop-img" alt="Muskmelon">
+              <div class="crop-info">
+                <h5>Muskmelon</h5>
+                <p><strong>Pesticides:</strong> Malathion, Dithane M-45</p>
+                <p><strong>Best Months:</strong> January – March</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Apple -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/apple.jpg" class="crop-img" alt="Apple">
+              <div class="crop-info">
+                <h5>Apple</h5>
+                <p><strong>Pesticides:</strong> Captan, Mancozeb</p>
+                <p><strong>Best Months:</strong> August – November</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Orange -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/orange.jpg" class="crop-img" alt="Orange">
+              <div class="crop-info">
+                <h5>Orange</h5>
+                <p><strong>Pesticides:</strong> Imidacloprid, Dimethoate</p>
+                <p><strong>Best Months:</strong> November – March</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Papaya -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/papaya.jpg" class="crop-img" alt="Papaya">
+              <div class="crop-info">
+                <h5>Papaya</h5>
+                <p><strong>Pesticides:</strong> Carbendazim, Rogor</p>
+                <p><strong>Best Months:</strong> February – May</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Coconut -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/coconut.jpg" class="crop-img" alt="Coconut">
+              <div class="crop-info">
+                <h5>Coconut</h5>
+                <p><strong>Pesticides:</strong> Chlorpyrifos, Neem Oil</p>
+                <p><strong>Best Months:</strong> May – September</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Cotton -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/cotton.jpg" class="crop-img" alt="Cotton">
+              <div class="crop-info">
+                <h5>Cotton</h5>
+                <p><strong>Pesticides:</strong> Acephate, Lambda-cyhalothrin</p>
+                <p><strong>Best Months:</strong> April – September</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Jute -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/jute.jpg" class="crop-img" alt="Jute">
+              <div class="crop-info">
+                <h5>Jute</h5>
+                <p><strong>Pesticides:</strong> Chlorpyrifos, Carbendazim</p>
+                <p><strong>Best Months:</strong> March – May</p>
+              </div>
+            </div>
+          </div>
+      
+          <!-- Coffee -->
+          <div class="col">
+            <div class="crop-card">
+              <img src="../assets/crops/coffee.jpg" class="crop-img" alt="Coffee">
+              <div class="crop-info">
+                <h5>Coffee</h5>
+                <p><strong>Pesticides:</strong> Copper Oxychloride, Thiamethoxam</p>
+                <p><strong>Best Months:</strong> June – September</p>
+              </div>
+            </div>
+          </div>
+      
+        </div> <!-- End row -->
+      </div> <!-- End container -->
+      
+      </body>
+      </html>
+      
+
+
+<app-footer></app-footer>

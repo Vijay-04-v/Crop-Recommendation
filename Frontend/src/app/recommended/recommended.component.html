@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crop Recommendation</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      background: linear-gradient(to right, #ff6f61, #ffb347);
+    }
+    .card {
+      margin-top: 50px;
+    }
+    .crop-image {
+      width: 100%;
+      max-width: 300px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .list-group-item {
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <app-header></app-header>
+
+<div class="container">
+  <div class="card mx-auto shadow-lg" style="max-width: 600px;">
+    <div class="card-header bg-success text-white text-center">
+      <h2>Recommended Crop: <span class="fw-bold">{{ prediction }}</span></h2>
+    </div>
+    <div class="card-body text-center">
+      <img [src]="imagePath" alt="{{ prediction }}" class="crop-image mb-4" onerror="this.src='../assets/crops/default.jpg'" />
+      <h4 class="text-primary mb-3">Input Values</h4>
+      <ul class="list-group text-start">
+        <li class="list-group-item"><strong>Nitrogen:</strong> {{ inputs[0] }}</li>
+        <li class="list-group-item"><strong>Phosphorous:</strong> {{ inputs[1] }}</li>
+        <li class="list-group-item"><strong>Potassium:</strong> {{ inputs[2] }}</li>
+        <li class="list-group-item"><strong>Temperature:</strong> {{ inputs[3] }} °C</li>
+        <li class="list-group-item"><strong>Humidity:</strong> {{ inputs[4] }} %</li>
+        <li class="list-group-item"><strong>pH:</strong> {{ inputs[5] }}</li>
+        <li class="list-group-item"><strong>Rainfall:</strong> {{ inputs[6] }} mm</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="predict-button-wrapper animate-in" style="padding-bottom: 150px;">
+  <button type="button" class="predict-button" routerLink="/predict">Predict</button>
+</div>
+
+</body>
+
+<app-footer></app-footer>
+</html>

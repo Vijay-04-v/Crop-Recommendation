@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow-x: hidden;
+        background: linear-gradient(to right, #ff6f619c, #ffb3479e);
+      }
+
+      .hero-section {
+        position: relative;
+        background: url("../assets/bg.gif") no-repeat center center/cover;
+        height: 100vh;
+        width: 100%;
+        padding-top: 65px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        color: white;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Black overlay with 50% opacity */
+        z-index: -1;
+      }
+
+      .title {
+        text-align: center;
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .title span {
+        display: inline-block;
+        background: linear-gradient(to right, #ff6f61, #ffb347);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        opacity: 0;
+        animation: slideFadeIn 2s ease-out forwards;
+      }
+
+      @keyframes slideFadeIn {
+        0% {
+          opacity: 0;
+          transform: translateX(100px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateX(0);
+        }
+      }
+
+      .hero-section button {
+        margin-top: 20px;
+      }
+
+      /* Scrolling Images Section */
+      .scrolling-images-container {
+        overflow: hidden;
+        background: linear-gradient(to right, #ff6f61, #ffb347);
+        padding: 30px 0;
+      }
+
+      .scrolling-images {
+        display: flex;
+        width: max-content;
+        animation: scroll-left 30s linear infinite;
+      }
+
+      .scrolling-images img {
+        height: 80px;
+        margin: 0 15px;
+        border-radius: 10px;
+      }
+
+      @keyframes scroll-left {
+        0% {
+          transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+
+      @media (max-width: 768px) {
+        .scrolling-images img {
+          height: 50px;
+          margin: 0 10px;
+        }
+
+        .title {
+          font-size: 2.5rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Hero Section -->
+    <app-header></app-header>
+    <section class="hero-section" style="padding: 0px;">
+      <h1 class="title"><span>Crop Recommendation</span></h1>
+      <button routerLink="/predict" class="btn btn-success">Predict</button>
+    </section>
+
+
+    
+    <section style="background: linear-gradient(to right, #ff6f61, #ffb347);">
+      
+     <!-- 👇 Add the ID here -->
+     <div id="about">
+      <h1 class="gradient-text" style="font-weight: bold;">ABOUT</h1>
+    </div>
+    
+
+      <div class="section">
+        <div class="image-container">
+          <img src="../assets/section 3.jpg" alt="Image 1">
+        </div>
+        <div class="text-container">
+          <h2>Section 1</h2>
+          <p>Machine Learning (ML) has become a powerful tool in modern agriculture, especially in crop recommendation systems. These systems aim to help farmers choose the best crops to grow based on data collected from their environment. By analyzing key parameters like soil type, nutrient levels, pH, temperature, humidity, and rainfall, ML models can provide accurate crop suggestions tailored to a specific location and time.</p>
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="image-container">
+          <img src="../assets/sec2.gif" alt="Image 2">
+        </div>
+        <div class="text-container">
+          <h2>Section 2</h2>
+          <p>Various machine learning algorithms such as Decision Trees, Random Forest, Naive Bayes, and Support Vector Machines are commonly used to build crop recommendation models. These models are trained on historical agricultural data to learn patterns and relationships between environmental conditions and crop performance. Once trained, they can predict which crops are most likely to thrive under given conditions, thus reducing trial-and-error farming.</p>
+        </div>
+      </div>
+      
+      <div class="section">
+        <div class="image-container">
+          <img src="../assets/section 2.jpg" alt="Image 3">
+        </div>
+        <div class="text-container">
+          <h2>Section 3</h2>
+          <p>The adoption of ML-based crop recommendation systems leads to smarter, more efficient farming. It helps farmers make informed decisions, reduce input costs, and improve yield and income. Additionally, by promoting crops that are best suited to current conditions, these systems support sustainable agriculture and minimize the environmental impact of over-farming or unsuitable crop choices.</p>
+        </div>
+      </div>
+      
+    </section>
+    <!-- Scrolling Images Section -->
+    <div class="scrolling-images-container">
+      <div class="scrolling-images">
+        <!-- First Set -->
+        <div class="image-set">
+          <img src="../assets/crops/apple.jpg" alt="img1" />
+          <img src="../assets/crops/banana.jpg" alt="img2" />
+          <img src="../assets/crops/blackgram.jpg" alt="img3" />
+          <img src="../assets/crops/chickpea.jpg" alt="img4" />
+          <img src="../assets/crops/coconut.jpg" alt="img5" />
+          <img src="../assets/crops/coffee.jpg" alt="img6" />
+          <img src="../assets/crops/cotton.jpg" alt="img7" />
+          <img src="../assets/crops/grapes.jpg" alt="img8" />
+          <img src="../assets/crops/jute.jpg" alt="img9" />
+          <img src="../assets/crops/kidneybeans.jpg" alt="img10" />
+          <img src="../assets/crops/lentil.jpg" alt="img11" />
+          <img src="../assets/crops/maize.jpg" alt="img12" />
+          <img src="../assets/crops/mango.jpg" alt="img13" />
+          <img src="../assets/crops/mothbeans.jpg" alt="img14" />
+          <img src="../assets/crops/mungbean.jpg" alt="img15" />
+          <img src="../assets/crops/muskmelon.jpg" alt="img16" />
+          <img src="../assets/crops/orange.jpg" alt="img17" />
+          <img src="../assets/crops/papaya.jpg" alt="img18" />
+          <img src="../assets/crops/pigeonpeas.jpg" alt="img19" />
+          <img src="../assets/crops/pomegranate.jpg" alt="img20" />
+          <img src="../assets/crops/rice.jpg" alt="img21" />
+          <img src="../assets/crops/watermelon.jpg" alt="img22" />
+        </div>
+
+        <!-- Duplicate Set -->
+        <div class="image-set">
+          <img src="../assets/crops/apple.jpg" alt="img1" />
+          <img src="../assets/crops/banana.jpg" alt="img2" />
+          <img src="../assets/crops/blackgram.jpg" alt="img3" />
+          <img src="../assets/crops/chickpea.jpg" alt="img4" />
+          <img src="../assets/crops/coconut.jpg" alt="img5" />
+          <img src="../assets/crops/coffee.jpg" alt="img6" />
+          <img src="../assets/crops/cotton.jpg" alt="img7" />
+          <img src="../assets/crops/grapes.jpg" alt="img8" />
+          <img src="../assets/crops/jute.jpg" alt="img9" />
+          <img src="../assets/crops/kidneybeans.jpg" alt="img10" />
+          <img src="../assets/crops/lentil.jpg" alt="img11" />
+          <img src="../assets/crops/maize.jpg" alt="img12" />
+          <img src="../assets/crops/mango.jpg" alt="img13" />
+          <img src="../assets/crops/mothbeans.jpg" alt="img14" />
+          <img src="../assets/crops/mungbean.jpg" alt="img15" />
+          <img src="../assets/crops/muskmelon.jpg" alt="img16" />
+          <img src="../assets/crops/orange.jpg" alt="img17" />
+          <img src="../assets/crops/papaya.jpg" alt="img18" />
+          <img src="../assets/crops/pigeonpeas.jpg" alt="img19" />
+          <img src="../assets/crops/pomegranate.jpg" alt="img20" />
+          <img src="../assets/crops/rice.jpg" alt="img21" />
+          <img src="../assets/crops/watermelon.jpg" alt="img22" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <app-footer></app-footer>
+  </body>
+</html>

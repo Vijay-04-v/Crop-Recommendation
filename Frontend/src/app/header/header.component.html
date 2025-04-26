@@ -1,0 +1,36 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container d-flex align-items-center justify-content-between w-100">
+
+    <!-- Left: Logo -->
+    <div class="d-flex align-items-center">
+      <img routerLink="/" src="../assets/logo1.png" alt="" style="height: 50px; width: 50px; cursor: pointer; margin-right: 10px;">
+      <h3 class="mb-0 text-white text-center">Crop Recommendation</h3>
+    </div>
+
+    <!-- Toggler Button for Mobile -->
+    <button class="navbar-toggler" type="button" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Right: Navigation Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto font" style="gap: 40px;">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" style="color: white;" routerLink="/home">HOME</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" style="color: white;" routerLink="/crops">CROPS</a>
+        </li>
+
+        <!--  It will help to redirect the page  -->
+        <li class="nav-item">
+          <a class="nav-link" style="color: white; cursor: pointer;" (click)="goToAbout()">ABOUT</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" style="color: white;" routerLink="/contact">CONTACT</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,49 @@
+
+  body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff6f61, #ffb347);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .contact-card {
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.95);
+    animation: slideFadeIn 1s ease forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  @keyframes slideFadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
+  .predict-button-wrapper {
+    display: flex;
+    justify-content: center;
+    // margin-top: 20px;
+    animation-delay: 0.8s;
+  }
+  
+  .predict-button {
+    padding: 14px 24px;
+    background: linear-gradient(to right, #42e695, #3bb2b8);
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .predict-button:hover {
+    background: linear-gradient(to right, #3bb2b8, #42e695);
+    transform: scale(1.05);
+  }
+  
+  
+  
